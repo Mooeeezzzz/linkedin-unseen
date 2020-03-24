@@ -1,0 +1,26 @@
+{
+  "update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "linkedin-unseen",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "16": "ico_16.png",
+    "48": "ico_48.png",
+    "128": "ico_128.png"
+  },
+  "description": "Blocks the 'Seen' and 'typing' feature on linkedin.",
+  "browser_action": {
+    "default_icon": "ico_128.png"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.linkedin.com/*"
+  ]
+}
